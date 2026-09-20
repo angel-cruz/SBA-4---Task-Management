@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobTrack</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+
+            <span class="navbar-brand">
+                JobTrack
+            </span>
+
+            <span class="navbar-text text-light">
+                Job Application Task Manager
+            </span>
+
+        </div>
+    </nav>
+
+    <div id="jobCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+
+            <button type="button" data-bs-target="#jobCarousel" data-bs-slide-to="0" class="active"
+                aria-label="Slide 1"></button>
+
+            <button type="button" data-bs-target="#jobCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+            <button type="button" data-bs-target="#jobCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+
+                <img src="https://pbs.twimg.com/media/GuNeeu6WgAAlFlF?format=webp&name=large" class="d-block w-100 carousel-image" alt="Person searching for jobs">
+
+                <div class="carousel-caption">
+
+                    <h2>Organize Your Job Search</h2>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="https://media.licdn.com/dms/image/sync/v2/D5627AQHq-S42PAqV5w/articleshare-shrink_800/B4EZ6EY2m1HUAY-/0/1780337570891?e=2147483647&v=beta&t=YEugWxqCOccoJRa7rUVy5yxpkNE2qXJdzUkw0pRSr5M" class="d-block w-100 carousel-image" alt="Professional job interview">
+
+                <div class="carousel-caption">
+
+                    <h2>Prepare for Interviews</h2>
+
+                    <p>
+                        Track upcoming interviews and preparation tasks.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="https://wwr-pro.s3.us-west-2.amazonaws.com/blog/2023/sponsorships+at+we+work+remotely.jpg" class="d-block w-100 carousel-image" alt="Resume and laptop">
+
+                <div class="carousel-caption">
+
+                    <h2>Stay on Track</h2>
+
+                    <p>
+                        Manage resumes, follow-ups, and assessments.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#jobCarousel" data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            <span class="visually-hidden">
+                Previous
+            </span>
+
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#jobCarousel" data-bs-slide="next">
+
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            <span class="visually-hidden">
+                Next
+            </span>
+
+        </button>
+
+    </div>
+
+    <main class="container my-5">
+
+        <div class="text-center mb-5">
+
+            <h1>
+                Job Application Tracker
+            </h1>
+
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="card h-100">
+
+                    <div class="card-body">
+
+                        <h2 class="h4 mb-4">
+                            Add Job Search Task
+                        </h2>
+
+                        <form id="taskForm">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+
+                                    <label for="taskName" class="form-label">
+                                        Task Name
+                                    </label>
+
+                                    <input type="text" id="taskName" class="form-control"
+                                        placeholder="Apply to Java Developer position" required>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="category" class="form-label">
+                                        Category
+                                    </label>
+
+                                    <select id="category" class="form-select" required>
+
+                                        <option value="">
+                                            Select Category
+                                        </option>
+
+                                        <option value="Application">
+                                            Application
+                                        </option>
+
+                                        <option value="Interview">
+                                            Interview
+                                        </option>
+
+                                        <option value="Follow Up">
+                                            Follow Up
+                                        </option>
+
+                                        <option value="Resume">
+                                            Resume
+                                        </option>
+
+                                        <option value="Networking">
+                                            Networking
+                                        </option>
+
+                                        <option value="Assessment">
+                                            Assessment
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="deadline" class="form-label">
+                                        Deadline
+                                    </label>
+
+                                    <input type="date" id="deadline" class="form-control" required>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="status" class="form-label">
+                                        Status
+                                    </label>
+
+                                    <select id="status" class="form-select">
+
+                                        <option value="In Progress">
+                                            In Progress
+                                        </option>
+
+                                        <option value="Completed">
+                                            Completed
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mt-4">
+                                Add Task
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body">
+
+                        <h2 class="h4 mb-4">
+                            Filter Tasks
+                        </h2>
+
+                        <div class="mb-3">
+
+                            <label for="statusFilter" class="form-label">
+                                Status
+                            </label>
+
+                            <select id="statusFilter" class="form-select">
+
+                                <option value="All">
+                                    All Statuses
+                                </option>
+
+                                <option value="In Progress">
+                                    In Progress
+                                </option>
+
+                                <option value="Completed">
+                                    Completed
+                                </option>
+
+                                <option value="Overdue">
+                                    Overdue
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div>
+
+                            <label for="categoryFilter" class="form-label">
+                                Category
+                            </label>
+
+                            <select id="categoryFilter" class="form-select">
+
+                                <option value="All">
+                                    All Categories
+                                </option>
+
+                                <option value="Application">
+                                    Application
+                                </option>
+
+                                <option value="Interview">
+                                    Interview
+                                </option>
+
+                                <option value="Follow Up">
+                                    Follow Up
+                                </option>
+
+                                <option value="Resume">
+                                    Resume
+                                </option>
+
+                                <option value="Networking">
+                                    Networking
+                                </option>
+
+                                <option value="Assessment">
+                                    Assessment
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h2 class="h4 mb-4">
+                    My Job Search Tasks
+                </h2>
+
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                                <th>Task</th>
+
+                                <th>Category</th>
+
+                                <th>Deadline</th>
+
+                                <th>Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="taskList">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
